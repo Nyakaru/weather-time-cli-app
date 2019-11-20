@@ -1,0 +1,20 @@
+{
+  "name": "weather-time-cli-app",
+  "version": "1.0.0",
+  "description": "Given an array of inputs (location name, postal code), log the current time and weather for those locations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyakaru/weather-time-cli-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nyakaru/weather-time-cli-app/issues"
+  },
+  "homepage": "https://github.com/Nyakaru/weather-time-cli-app#readme"
+}
