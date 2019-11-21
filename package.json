@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "tsc --outDir dist ./index.ts && node ./dist/index.js ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,26 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/dotenv": "^8.2.0",
+    "@types/jest": "^24.0.23",
     "@types/luxon": "^1.21.0",
     "@types/node": "^12.12.11",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/?(*.)(spec|test).(ts|js)",
+      "<rootDir>/**/?(*.)(spec|test).(ts|js)"
+    ]
+    
   }
 }

@@ -12,7 +12,7 @@ Simple command line weather and time app.
 ### Dependencies
 
 - [NodeJS](https://github.com/nodejs/node) - A JavaScript runtime environment
-- [GCP](https://cloud.google.com) - Google cloud platform
+- [GCP](https://cloud.google.com) - Google cloud platform (Geocoding)
 - [Dark Sky API ](https://darksky.net/dev/docs) - The Dark Sky API allows you to look up the weather anywhere on the globe, returning (where available)
 
 ### Getting Started
