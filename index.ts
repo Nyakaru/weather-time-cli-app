@@ -12,7 +12,8 @@ const address: Array<string> = process.argv.slice(2)
 export const getWeather = ((address: Array<string>, darkSkyApiKey: string, gcpKey: string) => {
   address.map((item: string) => {
     const gcpUrl: string = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + item + '&key=' + gcpKey
-
+    
+    // Get the latitude and longitude of different locations from the Geocoding API
     axios
       .get(gcpUrl)
       .then((res: ILocationRes) => {
@@ -22,6 +23,7 @@ export const getWeather = ((address: Array<string>, darkSkyApiKey: string, gcpKe
         const location: string = latitude + ',' + longitude
         const darkSkyUrl: string = `${darkSkyBaseUrl}/${darkSkyApiKey}/${location}`
 
+        // Get the weather and time of different locations from the Dark Sky API
         axios
           .get(darkSkyUrl)
           .then((res: IDarksApiResponse) => {
@@ -30,8 +32,11 @@ export const getWeather = ((address: Array<string>, darkSkyApiKey: string, gcpKe
               .setZone(res.data.timezone)
               .toFormat('DDDD t')
             const temperature: number = res.data.currently.temperature
+            
+            // Print out the output to the console
             console.log('It is', temperature, 'Fahrenheit (°F)', 'and', formattedTime, 'O`clock in', city)
           })
+          // Catch errors
           .catch((err: any) => {
             console.log(err)
           })
