@@ -22,7 +22,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "luxon": "^1.21.2"
+    "luxon": "^1.28.1"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
